@@ -1,0 +1,24 @@
+ .hero-section {
+   background-image: url('assets/pexels-cottonbro-3737575.jpg');
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+   position: relative;
+   height: 75vh;
+   /* Changed to explicit height */
+   display: flex;
+   align-items: center;
+ }
+
+ .hero-overlay {
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+ }
+
+ .hero-content {
+   position: relative;
+   z-index: 1;
+ }
