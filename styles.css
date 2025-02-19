@@ -1,3 +1,13 @@
+/* General styles */
+button {
+    background-color: #125B50;
+}
+
+/* Nav section styles */
+nav button {
+    background-color: #125B50;
+}
+
 /* hero styles */
 .hero-section {
     background-image: url('assets/pexels-cottonbro-3737575.jpg');
@@ -91,7 +101,7 @@
 }
 
 .book-button {
-    background-color: #0B5A4D;
+    background-color: #125B50;
     color: white;
     border: none;
     border-radius: 100px;
@@ -103,7 +113,7 @@
 }
 
 .book-button:hover {
-    background-color: #094a40;
+    background-color: #125B50;
 }
 
 .card-image {
@@ -139,7 +149,7 @@
 }
 
 .facial-content button {
-    background-color: #0B5A4D;
+    background-color: #125B50;
     color: white;
     font-size: 16px;
     padding: 8px 12px;
@@ -247,13 +257,13 @@
 
 .btn-outline {
     background: transparent;
-    border: 1px solid #0B5A4D;
+    border: 1px solid #125B50;
     color: #0B5A4D;
 }
 
 .btn-solid {
-    background: #0B5A4D;
-    border: 1px solid #0B5A4D;
+    background: #125B50;
+    border: 1px solid #125B50;
     color: white;
 }
 
@@ -265,4 +275,9 @@
     .service-item {
         max-width: 100%;
     }
+}
+
+/* Self-Care section styles */
+.self-care {
+    background-color: #125B50;
 }
