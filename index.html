@@ -2,185 +2,230 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Spa Capri</title>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
-  <link href="styles.css" rel="stylesheet">
-  <script src='scripts.js' defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spa Capri</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <script src='scripts.js' defer></script>
 </head>
 
 <body class="font-sans">
-  <!-- Navigation -->
-  <nav class="fixed w-full nav-scroll-transition bg-transparent z-50">
+<!-- Navigation -->
+<nav class="fixed w-full nav-scroll-transition bg-transparent z-50">
     <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-      <div class="text-2xl font-bold">Spa Capri</div>
-      <div class="hidden md:flex space-x-8 items-center">
-        <a href="#" class="text-gray-600 hover:text-green-700">About</a>
-        <a href="#" class="text-gray-600 hover:text-green-700">Services</a>
-        <a href="#" class="text-gray-600 hover:text-green-700">Contact</a>
-        <button class="bg-green-700 text-white px-6 py-2 rounded-full">Book Appointment</button>
-      </div>
+        <div class="text-2xl font-bold">Spa Capri</div>
+        <div class="hidden md:flex space-x-8 items-center">
+            <a href="#" class="text-gray-600 hover:text-green-700">About</a>
+            <a href="#" class="text-gray-600 hover:text-green-700">Services</a>
+            <a href="#" class="text-gray-600 hover:text-green-700">Contact</a>
+            <button class="bg-green-700 text-white px-6 py-2 rounded-full">Book Appointment</button>
+        </div>
     </div>
-  </nav>
+</nav>
 
-  <!-- Hero Section -->
-  <section class="hero-section">
+<!-- Hero Section -->
+<section class="hero-section">
     <div class="hero-overlay"></div>
     <div class="container mx-auto px-6 text-center hero-content">
-      <h1 class="text-5xl font-bold mb-6">Book your next appointment now!</h1>
-      <p class="text-xl text-gray-600 mb-8">Start your wellness journey today</p>
-      <button class="bg-green-700 text-white px-8 py-3 rounded-full text-lg">Book Now</button>
+        <h1 class="text-5xl font-bold mb-6">Book your next appointment now!</h1>
+        <p class="text-xl text-gray-600 mb-8">Start your wellness journey today</p>
+        <button class="bg-green-700 text-white px-8 py-3 rounded-full text-lg">Book Now</button>
     </div>
-  </section>
+</section>
 
-  <!-- Features Section -->
-  <section class="py-4">
+<!-- Features Section -->
+<section class="py-4">
     <div class="container mx-auto px-6">
-      <div class="flex cards-container">
-        <div class="facial-card feature-card">
-          <div class="facial-content">
-            <span class="service-type">FACIAL SERVICES</span>
-            <h3>Better skin starts here</h3>
-            <p>Let a skilled professional craft the perfect facial for your unique skin, creating a relaxing experience that leaves you glowing inside and out.</p>
-            <button>Book a facial</button>
-            <span class="location-note">Facials are available only at participating franchised locations.</span>
-          </div>
-          <div class="facial-image">
-            <img src="./assets/rosa-rafael-Pe9IXUuC6QU-unsplash.jpg" alt="Facial treatment being applied">
-          </div>
+        <div class="flex cards-container">
+            <div class="facial-card feature-card">
+                <div class="facial-content">
+                    <span class="service-type">FACIAL SERVICES</span>
+                    <h3>Better skin starts here</h3>
+                    <p>Let a skilled professional craft the perfect facial for your unique skin, creating a relaxing
+                        experience that leaves you glowing inside and out.</p>
+                    <button>Book a facial</button>
+                    <span class="location-note">Facials are available only at participating franchised locations.</span>
+                </div>
+                <div class="facial-image">
+                    <img src="./assets/rosa-rafael-Pe9IXUuC6QU-unsplash.jpg" alt="Facial treatment being applied">
+                </div>
+            </div>
+            <div class="facial-card">
+                <div class="facial-content">
+                    <span class="service-type">MASSAGE SERVICES</span>
+                    <h3>Deep, penetrating massage customized for your needs</h3>
+                    <p>Choose the style, pressure, and more to tailor the experience any way you'd like!</p>
+                    <button>Book a massage</button>
+                </div>
+                <div class="facial-image">
+                    <img src="./assets/alan-caishan-cU53ZFBr3lk-unsplash.jpg" alt="Deep tissue massage">
+                </div>
+            </div>
+            <div class="facial-card">
+                <div class="facial-content">
+                    <span class="service-type">AROMA THERAPY</span>
+                    <h3>Reduce stress and anxiety</h3>
+                    <p>Essential oils like lavender, bergamot, and chamomile can help calm the nervous system and reduce
+                        stress levels.</p>
+                    <button>Book an appointment</button>
+                </div>
+                <div class="facial-image">
+                    <img src="./assets/towfiqu-barbhuiya-jbjmimlaC-U-unsplash.jpg" alt="Aroma therapy">
+                </div>
+            </div>
         </div>
-        <div class="facial-card">
-          <div class="facial-content">
-            <span class="service-type">MASSAGE SERVICES</span>
-            <h3>Deep, penetrating massage customized for your needs</h3>
-            <p>Choose the style, pressure, and more to tailor the experience any way you'd like!</p>
-            <button>Book a massage</button>
-          </div>
-          <div class="facial-image">
-            <img src="./assets/alan-caishan-cU53ZFBr3lk-unsplash.jpg" alt="Deep tissue massage">
-          </div>
-        </div>
-        <div class="facial-card">
-          <div class="facial-content">
-            <span class="service-type">AROMA THERAPY</span>
-            <h3>Reduce stress and anxiety</h3>
-            <p>Essential oils like lavender, bergamot, and chamomile can help calm the nervous system and reduce stress levels.</p>
-            <button>Book an appointment</button>
-          </div>
-          <div class="facial-image">
-            <img src="./assets/towfiqu-barbhuiya-jbjmimlaC-U-unsplash.jpg" alt="Aroma therapy">
-          </div>
-        </div>
-      </div>
     </div>
-  </section>
 
-  <!-- About Section -->
-  <section class="py-16 bg-gray-50">
+
+    <!-- Feature icons -->
+    <section class="services-overview">
+        <div class="service-grid">
+            <!-- Massage -->
+            <div class="service-item">
+                <!-- placeholder for icon -->
+                <h3>Massage</h3>
+                <p>Your body is unique. Tell a trained massage therapist your needs, and
+                    they'll cater to you.</p>
+                <div class="button-container">
+                    <button class="btn-outline">Learn more</button>
+                    <button class="btn-solid">Book an appointment</button>
+                </div>
+            </div>
+
+            <!-- Stretch -->
+            <div class="service-item">
+                <!-- placeholder for icons -->
+                <h3>Stretch</h3>
+                <p>Relax and breathe while a trained provider applies a series of stretching techniques to ease tension.</p>
+                <div class="button-container">
+                    <button class="btn-outline">Learn More</button>
+                    <button class="btn-solid">Book an appointment</button>
+                </div>
+            </div>
+
+            <!-- Facials -->
+            <div class="service-item">
+                <!-- placeholder for icons -->
+                <h3>Facials</h3>
+                <p>Let our specialists tailor a facial to meet your needs and help you build a routine while at home.</p>
+                <div class="button-container">
+                    <button class="btn-outline">Learn more</button>
+                    <button class="btn-solid">Book an appointment</button>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>
+
+<!-- About Section -->
+<section class="py-16 bg-gray-50">
     <div class="container mx-auto px-6">
-      <div class="grid md:grid-cols-2 gap-12 items-center">
-        <div>
-          <h2 class="text-3xl font-bold mb-6">We do things a little differently</h2>
-          <div class="space-y-4">
-            <p class="text-gray-600">Experience our unique approach to wellness</p>
-            <p class="text-gray-600">Personalized programs for lasting results</p>
-          </div>
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <h2 class="text-3xl font-bold mb-6">We do things a little differently</h2>
+                <div class="space-y-4">
+                    <p class="text-gray-600">Experience our unique approach to wellness</p>
+                    <p class="text-gray-600">Personalized programs for lasting results</p>
+                </div>
+            </div>
+            <div>
+                <img src="/api/placeholder/500/400" alt="About Us" class="rounded-lg w-full">
+            </div>
         </div>
-        <div>
-          <img src="/api/placeholder/500/400" alt="About Us" class="rounded-lg w-full">
-        </div>
-      </div>
     </div>
-  </section>
+</section>
 
-  <!-- Locations Section -->
-  <section class="py-16">
+<!-- Locations Section -->
+<section class="py-16">
     <div class="container mx-auto px-6">
-      <h2 class="text-3xl font-bold mb-8">More than 1,000 franchised locations nationwide</h2>
-      <div class="bg-white rounded-lg shadow-lg p-4">
-        <img src="/api/placeholder/800/400" alt="Locations Map" class="w-full rounded">
-      </div>
+        <h2 class="text-3xl font-bold mb-8">More than 1,000 franchised locations nationwide</h2>
+        <div class="bg-white rounded-lg shadow-lg p-4">
+            <img src="/api/placeholder/800/400" alt="Locations Map" class="w-full rounded">
+        </div>
     </div>
-  </section>
+</section>
 
-  <!-- CTA Section -->
-  <section class="py-16 bg-green-700 text-white">
+<!-- CTA Section -->
+<section class="py-16 bg-green-700 text-white">
     <div class="container mx-auto px-6">
-      <div class="grid md:grid-cols-2 gap-12 items-center">
-        <div>
-          <h2 class="text-3xl font-bold mb-6">Self-care isn't selfish.</h2>
-          <ul class="space-y-4">
-            <li class="flex items-center">
-              <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-              </svg>
-              <span>Professional guidance</span>
-            </li>
-            <li class="flex items-center">
-              <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-              </svg>
-              <span>Personalized programs</span>
-            </li>
-            <li class="flex items-center">
-              <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-              </svg>
-              <span>Ongoing support</span>
-            </li>
-          </ul>
-          <button class="mt-8 bg-white text-green-700 px-8 py-3 rounded-full">Get Started</button>
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <h2 class="text-3xl font-bold mb-6">Self-care isn't selfish.</h2>
+                <ul class="space-y-4">
+                    <li class="flex items-center">
+                        <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                  d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span>Professional guidance</span>
+                    </li>
+                    <li class="flex items-center">
+                        <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                  d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span>Personalized programs</span>
+                    </li>
+                    <li class="flex items-center">
+                        <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                  d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span>Ongoing support</span>
+                    </li>
+                </ul>
+                <button class="mt-8 bg-white text-green-700 px-8 py-3 rounded-full">Get Started</button>
+            </div>
+            <div>
+                <img src="/api/placeholder/500/400" alt="CTA Image" class="rounded-lg w-full">
+            </div>
         </div>
-        <div>
-          <img src="/api/placeholder/500/400" alt="CTA Image" class="rounded-lg w-full">
-        </div>
-      </div>
     </div>
-  </section>
+</section>
 
-  <!-- Newsletter Section -->
-  <section class="py-16 bg-gray-50">
+<!-- Newsletter Section -->
+<section class="py-16 bg-gray-50">
     <div class="container mx-auto px-6 text-center">
-      <h2 class="text-3xl font-bold mb-8">Keep in touch with us</h2>
-      <div class="max-w-md mx-auto">
-        <input type="email" placeholder="Enter your email" class="w-full px-4 py-3 rounded-full mb-4">
-        <button class="bg-green-700 text-white px-8 py-3 rounded-full w-full">Subscribe</button>
-      </div>
+        <h2 class="text-3xl font-bold mb-8">Keep in touch with us</h2>
+        <div class="max-w-md mx-auto">
+            <input type="email" placeholder="Enter your email" class="w-full px-4 py-3 rounded-full mb-4">
+            <button class="bg-green-700 text-white px-8 py-3 rounded-full w-full">Subscribe</button>
+        </div>
     </div>
-  </section>
+</section>
 
-  <!-- Footer -->
-  <footer class="bg-gray-900 text-white py-16">
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-16">
     <div class="container mx-auto px-6">
-      <div class="grid md:grid-cols-4 gap-8">
-        <div>
-          <h3 class="font-bold mb-4">About</h3>
-          <ul class="space-y-2">
-            <li><a href="#" class="hover:text-green-500">Our Story</a></li>
-            <li><a href="#" class="hover:text-green-500">Team</a></li>
-            <li><a href="#" class="hover:text-green-500">Careers</a></li>
-          </ul>
+        <div class="grid md:grid-cols-4 gap-8">
+            <div>
+                <h3 class="font-bold mb-4">About</h3>
+                <ul class="space-y-2">
+                    <li><a href="#" class="hover:text-green-500">Our Story</a></li>
+                    <li><a href="#" class="hover:text-green-500">Team</a></li>
+                    <li><a href="#" class="hover:text-green-500">Careers</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="font-bold mb-4">Services</h3>
+                <ul class="space-y-2">
+                    <li><a href="#" class="hover:text-green-500">Programs</a></li>
+                    <li><a href="#" class="hover:text-green-500">Resources</a></li>
+                    <li><a href="#" class="hover:text-green-500">Blog</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="font-bold mb-4">Support</h3>
+                <ul class="space-y-2">
+                    <li><a href="#" class="hover:text-green-500">Help Center</a></li>
+                    <li><a href="#" class="hover:text-green-500">Contact Us</a></li>
+                    <li><a href="#" class="hover:text-green-500">Privacy Policy</a></li>
+                </ul>
+            </div>
         </div>
-        <div>
-          <h3 class="font-bold mb-4">Services</h3>
-          <ul class="space-y-2">
-            <li><a href="#" class="hover:text-green-500">Programs</a></li>
-            <li><a href="#" class="hover:text-green-500">Resources</a></li>
-            <li><a href="#" class="hover:text-green-500">Blog</a></li>
-          </ul>
-        </div>
-        <div>
-          <h3 class="font-bold mb-4">Support</h3>
-          <ul class="space-y-2">
-            <li><a href="#" class="hover:text-green-500">Help Center</a></li>
-            <li><a href="#" class="hover:text-green-500">Contact Us</a></li>
-            <li><a href="#" class="hover:text-green-500">Privacy Policy</a></li>
-          </ul>
-        </div>
-      </div>
     </div>
-  </footer>
+</footer>
 
 
 </body>
