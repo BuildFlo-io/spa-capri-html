@@ -281,3 +281,19 @@ nav button {
 .self-care {
     background-color: #125B50;
 }
+
+/* Keep In Touch section styles */
+.keep-in-touch {
+    background-color: #125B50;
+    color: white;
+
+}
+
+.keep-in-touch button {
+    background-color: #FBA1A1;
+    color: white;
+}
+.keep-in-touch button:hover {
+    background-color: #FF6363;
+    color: white;
+}
