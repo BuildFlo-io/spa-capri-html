@@ -113,7 +113,7 @@ nav button {
 .book-button {
     background-color: #125B50;
     color: white;
-    border: none;
+    border: 1px solid #125B50;
     border-radius: 100px;
     padding: 12px 24px;
     font-size: 16px;
