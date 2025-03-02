@@ -41,8 +41,8 @@ nav button {
 
 .view-calendar:hover {
     background-color: transparent;
-    color: #125B50;
-    border: 1px solid #125B50;
+    color: #C599B6;
+    border: 1px solid #C599B6;
 }
 
 .nav-scroll-transition {
@@ -122,9 +122,9 @@ nav button {
 }
 
 .book-button:hover {
-    background-color: #c499b6;
+    background-color: #c599b6;
     color: #fff;
-    border: 1px solid #c499b6;
+    border: 1px solid #c599b6;
 
 }
 
@@ -443,7 +443,7 @@ nav button {
 }
 
 .cta-button:hover {
-    background-color: #FBA1A1;
+    background-color: #C599B6;
     color: #ffffff;
 }
 
