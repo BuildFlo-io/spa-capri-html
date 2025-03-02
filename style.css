@@ -269,26 +269,26 @@ nav button {
 
 .btn-outline {
     background: transparent;
-    border: 1px solid #125B50;
-    color: #0B5A4D;
+    border: 1px solid #C599B6;
+    color: #C599B6;
 }
 
 .btn-outline:hover {
-    background: #125B50;
-    border: 1px solid #125B50;
+    background: #C599B6;
+    border: 1px solid #C599B6;
     color: #fff;
 }
 
 .btn-solid {
-    background: #125B50;
-    border: 1px solid #125B50;
+    background: #C599B6;
+    border: 1px solid #C599B6;
     color: white;
 }
 
 .btn-solid:hover {
     background-color: transparent;
-    border: 1px solid #125B50;
-    color: #125B50;
+    border: 1px solid #C599B6;
+    color: #C599B6;
 }
 
 @media (max-width: 768px) {
