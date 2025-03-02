@@ -122,9 +122,9 @@ nav button {
 }
 
 .book-button:hover {
-    background-color: transparent;
-    color: #125B50;
-    border: 1px solid #125B50;
+    background-color: #c499b6;
+    color: #fff;
+    border: 1px solid #c499b6;
 
 }
 
