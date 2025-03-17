@@ -21,12 +21,28 @@ window.addEventListener('scroll', function () {
   if (window.scrollY > 0) {
     nav.classList.add('bg-white', 'shadow-lg');
     nav.classList.remove('bg-transparent');
+
+    if (window.innerWidth <= 767) { // Mobile breakpoint
+      nav.classList.remove('fixed');
+      nav.classList.add('sticky', 'top-0');
+    } else {
+      nav.classList.add('fixed');
+      nav.classList.remove('sticky', 'top-0');
+    }
   } else {
     if (!isHomePage) {
       nav.classList.add('shadow-lg');
     } else {
       nav.classList.remove('bg-white', 'shadow-lg');
       nav.classList.add('bg-transparent');
+    }
+
+    if (window.innerWidth <= 767) { // Mobile breakpoint
+      nav.classList.add('fixed');
+      nav.classList.remove('sticky', 'top-0');
+    } else {
+      nav.classList.remove('fixed');
+      nav.classList.add('sticky', 'top-0');
     }
   }
 });
