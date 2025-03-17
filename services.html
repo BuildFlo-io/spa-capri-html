@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services - Healing Breeze</title>
+  <style>
+    /* Base styles */
+    :root {
+      --primary-color: #102C57;
+      --secondary-color: #1679AB;
+      --tertiary-color: #FFB1B1;
+      --text-color: #333333;
+      --light-bg: #FAF7F2;
+      --white: #ffffff;
+      --transition: all 0.3s ease;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      color: var(--text-color);
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      font-weight: 600;
+      line-height: 1.3;
+    }
+
+    /* Hero Section */
+    .hero {
+      position: relative;
+      height: 80vh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .hero-split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      height: 100%;
+      width: 100%;
+    }
+
+    .hero-content {
+      padding: 0 5vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background-color: var(--primary-color);
+      color: white;
+      position: relative;
+    }
+
+    .hero-content::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: -50px;
+      width: 100px;
+      height: 100%;
+      background-color: var(--primary-color);
+      transform: skewX(-10deg);
+      z-index: 1;
+    }
+
+    .hero-image {
+      background-image: url('/api/placeholder/1200/800');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+
+    .hero-content h1 {
+      font-size: 3.5rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.2;
+    }
+
+    .hero-content p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      max-width: 500px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 30px;
+      border-radius: 100px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .btn-primary {
+      background-color: var(--white);
+      color: var(--primary-color);
+      border: 2px solid var(--white);
+    }
+
+    .btn-primary:hover {
+      background-color: transparent;
+      color: var(--white);
+    }
+
+    /* Services Intro */
+    .services-intro {
+      padding: 120px 0 60px;
+      text-align: center;
+    }
+
+    .services-intro h2 {
+      font-size: 2.5rem;
+      color: var(--primary-color);
+      margin-bottom: 1.5rem;
+      position: relative;
+      display: inline-block;
+    }
+
+    .services-intro h2::after {
+      content: '';
+      position: absolute;
+      bottom: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background-color: var(--secondary-color);
+      border-radius: 2px;
+    }
+
+    .services-intro p {
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+      color: #555;
+      margin-top: 2rem;
+    }
+
+    /* Service Cards */
+    .services-grid {
+      padding: 20px 0 100px;
+    }
+
+    .cards-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+    }
+
+    .service-card {
+      border-radius: 16px;
+      overflow: hidden;
+      background-color: white;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      transition: var(--transition);
+      position: relative;
+      height: 450px;
+    }
+
+    .service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-image {
+      height: 220px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: var(--transition);
+    }
+
+    .service-card:hover .card-image img {
+      transform: scale(1.05);
+    }
+
+    .service-tag {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background-color: var(--secondary-color);
+      color: white;
+      padding: 6px 12px;
+      border-radius: 100px;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 600;
+    }
+
+    .card-content {
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      height: calc(100% - 220px);
+    }
+
+    .card-content h3 {
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+      color: var(--primary-color);
+    }
+
+    .card-content p {
+      font-size: 0.95rem;
+      color: #666;
+      margin-bottom: 25px;
+      flex-grow: 1;
+    }
+
+    .learn-more {
+      display: flex;
+      align-items: center;
+      color: var(--secondary-color);
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: var(--transition);
+    }
+
+    .learn-more:hover {
+      color: var(--primary-color);
+    }
+
+    .learn-more svg {
+      margin-left: 8px;
+      transition: var(--transition);
+    }
+
+    .learn-more:hover svg {
+      transform: translateX(5px);
+    }
+
+    /* Featured Service */
+    .featured-service {
+      padding: 100px 0;
+      background-color: var(--light-bg);
+    }
+
+    .featured-container {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .featured-content h2 {
+      font-size: 2.2rem;
+      color: var(--primary-color);
+      margin-bottom: 25px;
+    }
+
+    .featured-content p {
+      margin-bottom: 20px;
+      font-size: 1rem;
+      color: #555;
+    }
+
+    .featured-list {
+      margin: 30px 0;
+      list-style-type: none;
+    }
+
+    .featured-list li {
+      margin-bottom: 15px;
+      padding-left: 30px;
+      position: relative;
+      font-size: 1rem;
+    }
+
+    .featured-list li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--secondary-color);
+      font-weight: bold;
+    }
+
+    .featured-image {
+      position: relative;
+      height: 100%;
+      min-height: 400px;
+    }
+
+    .featured-image-main {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 16px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    }
+
+    .accent-box {
+      position: absolute;
+      bottom: -30px;
+      left: -30px;
+      width: 140px;
+      height: 140px;
+      background-color: var(--tertiary-color);
+      opacity: 0.8;
+      border-radius: 16px;
+      z-index: -1;
+    }
+
+    .btn-outline {
+      background-color: transparent;
+      color: var(--primary-color);
+      border: 2px solid var(--primary-color);
+    }
+
+    .btn-outline:hover {
+      background-color: var(--primary-color);
+      color: white;
+    }
+
+    /* Process Section */
+    .process-section {
+      padding: 100px 0;
+    }
+
+    .process-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .process-header h2 {
+      font-size: 2.5rem;
+      color: var(--primary-color);
+      margin-bottom: 20px;
+    }
+
+    .process-header p {
+      max-width: 700px;
+      margin: 0 auto;
+      color: #555;
+    }
+
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+    }
+
+    .process-step {
+      text-align: center;
+      position: relative;
+      padding: 0 15px;
+    }
+
+    .step-number {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background-color: var(--primary-color);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin: 0 auto 20px;
+    }
+
+    .process-step h3 {
+      font-size: 1.2rem;
+      margin-bottom: 15px;
+      color: var(--primary-color);
+    }
+
+    .process-step p {
+      font-size: 0.9rem;
+      color: #666;
+    }
+
+    .process-step::after {
+      content: '';
+      position: absolute;
+      top: 30px;
+      right: -15px;
+      width: 30px;
+      height: 2px;
+      background-color: var(--primary-color);
+    }
+
+    .process-step:last-child::after {
+      display: none;
+    }
+
+    /* CTA Section */
+    .cta-section {
+      padding: 80px 0;
+      background-color: var(--primary-color);
+      color: white;
+      text-align: center;
+    }
+
+    .cta-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .cta-section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .cta-section p {
+      margin-bottom: 30px;
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
+
+    .btn-cta {
+      background-color: white;
+      color: var(--primary-color);
+      border: 2px solid white;
+      font-size: 1.1rem;
+    }
+
+    .btn-cta:hover {
+      background-color: transparent;
+      color: white;
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .hero-content h1 {
+        font-size: 2.8rem;
+      }
+
+      .process-steps {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px 30px;
+      }
+
+      .process-step:nth-child(2)::after {
+        display: none;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero-split {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-image {
+        display: none;
+      }
+
+      .hero-content {
+        padding: 0 5vw;
+      }
+
+      .hero-content::after {
+        display: none;
+      }
+    }
+
+    .featured-container {
+      grid-template-columns: 1fr;
+    }
+
+    .featured-image {
+      order: -1;
+      margin-bottom: 30px;
+    }
+
+    .accent-box {
+      display: none;
+    }
+
+    .services-intro {
+      padding: 80px 0 40px;
+    }
+
+    .services-intro h2 {
+      font-size: 2rem;
+    }
+
+    .cta-section h2 {
+      font-size: 2rem;
+    }
+
+    @media (max-width: 480px) {
+      .process-steps {
+        grid-template-columns: 1fr;
+      }
+
+      .process-step::after {
+        display: none;
+      }
+
+      .hero-content h1 {
+        font-size: 2.2rem;
+      }
+
+      .btn {
+        padding: 12px 25px;
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header would be inserted via WordPress -->
+
+  <!-- Hero Section -->
+  <!-- <section class="hero">
+    <div class="hero-split">
+      <div class="hero-content">
+        <h1>Experience Wellness Your Way</h1>
+        <p>Discover our personalized treatments designed to restore balance, reduce stress, and enhance your natural beauty.</p>
+        <a href="#book-now" class="btn btn-primary">Book Your Service</a>
+      </div>
+      <div class="hero-image"></div>
+    </div>
+  </section> -->
+
+  <!-- Services Intro -->
+  <section class="services-intro">
+    <div class="container">
+      <h2>Our Wellness Services</h2>
+      <p>At Healing Breeze, we believe in the power of holistic wellness. Our services are designed to address your unique needs, helping you look and feel your absolute best. Each treatment is
+        delivered by certified professionals using premium products and techniques.</p>
+    </div>
+  </section>
+
+  <!-- Service Cards -->
+  <section class="services-grid">
+    <div class="container">
+      <div class="cards-container">
+        <!-- Massage Card -->
+        <div class="service-card">
+          <div class="card-image">
+            <img src="./assets/alan-caishan-cU53ZFBr3lk-unsplash.jpg" alt="Massage Therapy">
+            <span class="service-tag">Relaxation</span>
+          </div>
+          <div class="card-content">
+            <h3>Massage Therapy</h3>
+            <p>Our therapeutic massage services help reduce tension, improve circulation, and promote overall wellness for body and mind. Each session is tailored to your specific needs.</p>
+            <a href="#massage" class="learn-more">
+              Discover More
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14"></path>
+                <path d="M12 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Head Spa Card -->
+        <div class="service-card">
+          <div class="card-image">
+            <img src="./assets/pexels-rdne-7755663.jpg" alt="Head Spa">
+            <span class="service-tag">Discover</span>
+          </div>
+          <div class="card-content">
+            <h3>Head Spa</h3>
+            <p>Enjoy a scalp massage and specialized treatments to improve scalp health, reduce tension, and promote healthier hair. A truly relaxing experience with lasting benefits.</p>
+            <a href="#head-spa" class="learn-more">
+              Discover More
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14"></path>
+                <path d="M12 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Facials Card -->
+        <div class="service-card">
+          <div class="card-image">
+            <img src="./assets/pexels-arina-krasnikova-6663368.jpg" alt="Facials & Skin Care">
+            <span class="service-tag">Rejuvenate</span>
+          </div>
+          <div class="card-content">
+            <h3>Facials & Skin Care</h3>
+            <p>Let our specialists tailor facial treatments to address your skin's specific needs. Experience a comprehensive approach to skincare that delivers visible results.</p>
+            <a href="#facials" class="learn-more">
+              Discover More
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14"></path>
+                <path d="M12 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Eyelash Extensions Card -->
+        <div class="service-card">
+          <div class="card-image">
+            <img src="./assets/pexels-rdne-7755531.jpg" alt="Eyelash Extensions">
+            <span class="service-tag">Enhance</span>
+          </div>
+          <div class="card-content">
+            <h3>Eyelash Extensions</h3>
+            <p>Luxury eyelash extensions meticulously applied by certified technicians to enhance your natural lashes. Wake up looking fresh and ready to go every day.</p>
+            <a href="#eyelashes" class="learn-more">
+              Discover More
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14"></path>
+                <path d="M12 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Service Section -->
+  <section class="featured-service">
+    <div class="container">
+      <div class="featured-container">
+        <div class="featured-content">
+          <h2>Discover Our Head Spa Experience</h2>
+          <p>Our signature Head Spa treatment combines ancient techniques with modern science for a truly transformative experience. More than just a scalp massage, this comprehensive service
+            addresses both scalp health and overall wellbeing.</p>
+          <p>Each session begins with a thorough consultation to understand your specific concerns and goals.</p>
+
+          <ul class="featured-list">
+            <li>Deep scalp massage to stimulate circulation</li>
+            <li>Premium products for intense nourishment</li>
+            <li>Specialized techniques to reduce tension</li>
+            <li>Customized treatment for your specific needs</li>
+            <li>Promotes healthier, more vibrant hair</li>
+          </ul>
+
+          <a href="#book-now" class="btn btn-outline">Book This Service</a>
+        </div>
+        <div class="featured-image">
+          <img src="./assets/pexels-lespa-s-1-v-di-u-tr-m-n-nam-s-o-r-3370719-5042606.jpg" alt="Head Spa Treatment" class="featured-image-main">
+          <div class="accent-box"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process Section -->
+  <section class="process-section">
+    <div class="container">
+      <div class="process-header">
+        <h2>Our Service Process</h2>
+        <p>Experience a seamless journey from booking to treatment, designed to ensure your complete satisfaction and relaxation.</p>
+      </div>
+
+      <div class="process-steps">
+        <div class="process-step">
+          <div class="step-number">1</div>
+          <h3>Consultation</h3>
+          <p>We begin with a thorough consultation to understand your specific needs and goals.</p>
+        </div>
+
+        <div class="process-step">
+          <div class="step-number">2</div>
+          <h3>Customization</h3>
+          <p>Your specialist creates a personalized treatment plan just for you.</p>
+        </div>
+
+        <div class="process-step">
+          <div class="step-number">3</div>
+          <h3>Treatment</h3>
+          <p>Enjoy your service in our relaxing, comfortable environment.</p>
+        </div>
+
+        <div class="process-step">
+          <div class="step-number">4</div>
+          <h3>Aftercare</h3>
+          <p>Receive personalized care recommendations to extend your results.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+
+</html>
