@@ -652,24 +652,3 @@ nav button {
 @media screen and (min-width: 1024px) {
   /* Current desktop styles remain as is */
 }
-
-@media screen and (max-width: 767px) {
-  nav {
-    position: sticky;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    background-color: #ffffff;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  }
-
-  body {
-    padding-top: 0;
-  }
-}
-
-@media screen and (max-width: 767px) and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-device-pixel-ratio: 3) {
-  nav {
-    padding-top: env(safe-area-inset-top);
-  }
-}
